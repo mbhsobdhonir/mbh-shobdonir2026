@@ -50,3 +50,26 @@ if(footer){
 footer.innerHTML=`© ${new Date().getFullYear()} MBH শব্দনীড় | সর্বস্বত্ব সংরক্ষিত`;
 
 }
+// Auto Banner Slider
+
+let slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(){
+
+    slides.forEach(slide=>slide.classList.remove("active"));
+
+    current++;
+
+    if(current >= slides.length){
+
+        current = 0;
+
+    }
+
+    slides[current].classList.add("active");
+
+}
+
+setInterval(showSlide,4000);
