@@ -183,3 +183,42 @@ nav ul li a:hover{
 }
 
 /* ==========================
+/* ===== Banner ===== */
+
+.banner{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    margin:30px 0;
+}
+
+.slide{
+    display:none;
+    position:relative;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.banner-text{
+    position:absolute;
+    left:50px;
+    bottom:50px;
+    color:#fff;
+    background:rgba(0,0,0,.5);
+    padding:20px;
+    border-radius:10px;
+}
+
+.banner-text h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
