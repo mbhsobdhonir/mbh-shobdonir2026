@@ -346,3 +346,34 @@ nav ul li{
 #topBtn:hover{
     background:#0b5d57;
 }
+/* ===== Dark Mode ===== */
+
+#darkModeBtn{
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#0f766e;
+    color:#fff;
+    font-size:18px;
+    margin-left:15px;
+}
+
+body.dark{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark header{
+    background:#1b1b1b;
+}
+
+body.dark .book-card,
+body.dark .category-card{
+    background:#222;
+    color:#fff;
+}
+
+body.dark footer{
+    background:#000;
+}
