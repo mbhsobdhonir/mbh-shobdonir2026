@@ -100,3 +100,17 @@ book.style.display="none";
 });
 
 }
+// ===== Mobile Menu =====
+
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
+
+if(menuToggle){
+
+menuToggle.addEventListener("click", ()=>{
+
+nav.classList.toggle("active");
+
+});
+
+}
