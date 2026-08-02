@@ -73,3 +73,30 @@ function showSlide(){
 }
 
 setInterval(showSlide,4000);
+// ===== Book Search =====
+
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+let books = document.querySelectorAll(".book-card");
+
+books.forEach(book=>{
+
+let title = book.querySelector("h3").textContent.toLowerCase();
+
+if(title.includes(value)){
+book.style.display="block";
+}else{
+book.style.display="none";
+}
+
+});
+
+});
+
+}
