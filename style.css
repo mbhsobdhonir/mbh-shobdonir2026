@@ -258,3 +258,22 @@ nav ul li a:hover{
     color:#fff;
     transform:translateY(-5px);
 }
+/* ===== Search Box ===== */
+
+.search-box{
+    flex:1;
+    margin:0 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 18px;
+    border:2px solid #0f766e;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+}
+
+.search-box input:focus{
+    box-shadow:0 0 10px rgba(15,118,110,.3);
+}
