@@ -222,3 +222,39 @@ nav ul li a:hover{
     font-size:36px;
     margin-bottom:10px;
 }
+/* ===== Categories ===== */
+
+.categories{
+    padding:70px 0;
+}
+
+.categories h2{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:35px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+}
+
+.category-card{
+    background:#ffffff;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    text-decoration:none;
+    color:#222;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.category-card:hover{
+    background:#0f766e;
+    color:#fff;
+    transform:translateY(-5px);
+}
