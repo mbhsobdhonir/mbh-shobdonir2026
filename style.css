@@ -310,3 +310,16 @@ nav ul li{
 }
 
 }
+/* ===== Latest Books ===== */
+
+.latest-books{
+    padding:80px 0;
+    background:#f8fafc;
+}
+
+.latest-books h2{
+    text-align:center;
+    color:#0f766e;
+    margin-bottom:40px;
+    font-size:36px;
+}
