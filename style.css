@@ -473,3 +473,150 @@ body.dark footer{
 .book-details ul li a:hover{
     text-decoration:underline;
 }
+/* ===================================
+   MBH Professional Book Reading Theme
+=================================== */
+
+.story-page{
+    padding:70px 15px;
+    background:#f4f1ea;
+    min-height:100vh;
+}
+
+.story-page .container{
+    max-width:850px;
+    margin:auto;
+    background:#ffffff;
+    padding:60px;
+    border-radius:18px;
+    box-shadow:0 12px 40px rgba(0,0,0,.12);
+}
+
+.story-page h1{
+    text-align:center;
+    color:#0f766e;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.story-page h2{
+    text-align:center;
+    color:#333;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.story-page h3{
+    text-align:center;
+    font-size:22px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.story-page hr{
+    border:none;
+    border-top:2px solid #e5e7eb;
+    margin:35px 0;
+}
+
+.story-page p{
+    font-size:22px;
+    line-height:2.2;
+    color:#2c2c2c;
+    text-align:justify;
+    text-indent:35px;
+    margin-bottom:24px;
+}
+
+.story-page blockquote{
+    margin:35px 0;
+    padding:25px;
+    border-left:6px solid #0f766e;
+    background:#f8fafc;
+    border-radius:12px;
+    font-size:22px;
+    line-height:2;
+    font-style:italic;
+}
+
+.story-page img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.story-page .btn{
+    margin:8px;
+}
+
+.story-page a{
+    text-decoration:none;
+}
+
+.story-page strong{
+    color:#0f766e;
+}
+
+.story-page::selection{
+    background:#0f766e;
+    color:#fff;
+}
+
+/* Footer */
+
+.footer{
+    margin-top:0;
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0f766e;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.story-page{
+    padding:25px 10px;
+}
+
+.story-page .container{
+    padding:25px;
+}
+
+.story-page h1{
+    font-size:30px;
+}
+
+.story-page h2{
+    font-size:24px;
+}
+
+.story-page h3{
+    font-size:18px;
+}
+
+.story-page p{
+    font-size:19px;
+    line-height:2;
+    text-indent:20px;
+}
+
+.story-page blockquote{
+    font-size:19px;
+    padding:18px;
+}
+
+}
