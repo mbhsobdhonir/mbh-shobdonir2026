@@ -1921,3 +1921,335 @@ nav ul li a.active{
     }
 
            }
+/* =========================================
+   📚 MBH শব্দনীড়
+   Professional Book Review Section
+========================================= */
+
+.book-reviews {
+    background: #f4f1ea;
+    padding: 80px 15px;
+}
+
+.book-reviews .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* ===== Heading ===== */
+
+.review-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.review-heading > span {
+    font-size: 42px;
+}
+
+.review-heading h2 {
+    color: #0f766e;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.review-heading p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.review-heading strong {
+    color: #0f766e;
+}
+
+
+/* ===== Review Form ===== */
+
+.review-form-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    margin-bottom: 45px;
+}
+
+.review-form-card h3 {
+    color: #0f766e;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* ===== Form Group ===== */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+/* ===== Input ===== */
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    padding: 13px 15px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 17px;
+    outline: none;
+    background: #fafafa;
+    transition: .3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #0f766e;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(15,118,110,.10);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+}
+
+
+/* =========================================
+   ⭐ Star Rating
+========================================= */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 38px;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: .2s;
+    margin: 0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #f59e0b;
+    transform: scale(1.08);
+}
+
+
+/* ===== Submit Button ===== */
+
+.review-submit-btn {
+    width: 100%;
+    border: none;
+    background: #0f766e;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.review-submit-btn:hover {
+    background: #0b5d57;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   📖 Review List
+========================================= */
+
+.review-list-section {
+    background: transparent;
+}
+
+.review-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+.review-list-header h3 {
+    color: #0f766e;
+    font-size: 26px;
+}
+
+#reviewCount {
+    background: #0f766e;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* ===== Individual Review ===== */
+
+.review-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    border-left: 4px solid #0f766e;
+}
+
+.review-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    background: #0f766e;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    color: #333;
+}
+
+.review-date {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* ===== Review Stars ===== */
+
+.review-stars {
+    color: #f59e0b;
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+.review-text {
+    margin-top: 18px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* ===== Empty Review ===== */
+
+.no-review {
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+
+.no-review-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.no-review h4 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.no-review p {
+    color: #888;
+}
+
+
+/* =========================================
+   📱 Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+    .book-reviews {
+        padding: 50px 12px;
+    }
+
+    .review-heading h2 {
+        font-size: 30px;
+    }
+
+    .review-heading p {
+        font-size: 16px;
+    }
+
+    .review-form-card {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .review-form-card h3 {
+        font-size: 22px;
+    }
+
+    .star-rating label {
+        font-size: 34px;
+    }
+
+    .review-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .review-item {
+        padding: 20px;
+    }
+
+    .review-user {
+        flex-direction: column;
+    }
+
+    .review-stars {
+        margin-top: 5px;
+    }
+
+}
