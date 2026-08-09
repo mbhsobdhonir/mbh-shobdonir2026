@@ -1270,3 +1270,128 @@ bottom:18px;
 .book-card:hover{
     transform:translateY(-8px);
 }
+/* =====================================
+   FIX — Poem Reading Layout
+   19 দিনের সংসার
+===================================== */
+
+.chapter{
+    width:100%;
+    overflow:hidden;
+}
+
+.chapter .container{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.story-content{
+    width:100%;
+    max-width:100%;
+    margin:0 auto;
+    display:block;
+}
+
+/* কবিতার প্রতিটি অংশ */
+.story-content p{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 auto 30px !important;
+    padding:0 !important;
+
+    text-align:center !important;
+
+    font-size:21px;
+    line-height:2.2;
+
+    display:block;
+    float:none !important;
+    clear:both !important;
+}
+
+/* শিরোনাম */
+.story-content h2,
+.story-content h3{
+    width:100%;
+    text-align:center;
+    margin:30px auto;
+}
+
+/* Quote */
+.story-content blockquote{
+    width:100% !important;
+    max-width:800px !important;
+
+    margin:35px auto !important;
+
+    padding:25px 30px;
+
+    text-align:center !important;
+
+    box-sizing:border-box;
+
+    float:none !important;
+    clear:both !important;
+
+    line-height:2.2;
+}
+
+/* লেখকের অংশ */
+.story-content > div{
+    width:100%;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+/* Horizontal line */
+.story-content hr{
+    width:80%;
+    margin:35px auto;
+    border:0;
+    border-top:1px solid #ddd;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:768px){
+
+    .chapter{
+        padding:25px 10px;
+    }
+
+    .chapter .container{
+        width:100%;
+        padding:25px 18px;
+    }
+
+    .story-content{
+        width:100%;
+    }
+
+    .story-content p{
+        width:100% !important;
+        font-size:19px;
+        line-height:2.1;
+        text-align:center !important;
+        margin-bottom:28px !important;
+    }
+
+    .story-content blockquote{
+        width:100% !important;
+        padding:20px 15px;
+        font-size:19px;
+        line-height:2;
+        text-align:center !important;
+    }
+
+    .story-content h2{
+        font-size:25px;
+    }
+
+}
