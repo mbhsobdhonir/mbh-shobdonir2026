@@ -145,3 +145,247 @@ darkBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
 });
+/* =========================================
+   📚 MBH শব্দনীড়
+   Book Review System
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const reviewForm = document.getElementById("reviewForm");
+    const reviewList = document.getElementById("reviewList");
+    const reviewCount = document.getElementById("reviewCount");
+    const noReviewMessage = document.getElementById("noReviewMessage");
+
+    if (!reviewForm) return;
+
+
+    /* ===== Load Reviews ===== */
+
+    let reviews = JSON.parse(
+        localStorage.getItem("mbhPakhirNirReviews")
+    ) || [];
+
+
+    /* ===== Display Reviews ===== */
+
+    function displayReviews() {
+
+        reviewList.innerHTML = "";
+
+        reviewCount.textContent =
+            reviews.length + "টি রিভিউ";
+
+
+        if (reviews.length === 0) {
+
+            noReviewMessage.style.display = "block";
+
+            return;
+        }
+
+        noReviewMessage.style.display = "none";
+
+
+        reviews.forEach(function (review) {
+
+            const reviewItem =
+                document.createElement("div");
+
+            reviewItem.className = "review-item";
+
+
+            /* User Section */
+
+            const userSection =
+                document.createElement("div");
+
+            userSection.className = "review-user";
+
+
+            const reviewerInfo =
+                document.createElement("div");
+
+            reviewerInfo.className = "reviewer-info";
+
+
+            /* Avatar */
+
+            const avatar =
+                document.createElement("div");
+
+            avatar.className = "reviewer-avatar";
+
+            avatar.textContent = "👤";
+
+
+            /* Name + Date */
+
+            const info =
+                document.createElement("div");
+
+
+            const name =
+                document.createElement("div");
+
+            name.className = "reviewer-name";
+
+            name.textContent = review.name;
+
+
+            const date =
+                document.createElement("div");
+
+            date.className = "review-date";
+
+            date.textContent = review.date;
+
+
+            info.appendChild(name);
+            info.appendChild(date);
+
+
+            reviewerInfo.appendChild(avatar);
+            reviewerInfo.appendChild(info);
+
+
+            /* Stars */
+
+            const stars =
+                document.createElement("div");
+
+            stars.className = "review-stars";
+
+            stars.textContent =
+                "★".repeat(review.rating) +
+                "☆".repeat(5 - review.rating);
+
+
+            userSection.appendChild(reviewerInfo);
+            userSection.appendChild(stars);
+
+
+            /* Review Text */
+
+            const reviewText =
+                document.createElement("div");
+
+            reviewText.className = "review-text";
+
+            reviewText.textContent =
+                review.text;
+
+
+            reviewItem.appendChild(userSection);
+            reviewItem.appendChild(reviewText);
+
+
+            reviewList.appendChild(reviewItem);
+
+        });
+
+    }
+
+
+    /* ===== Submit Review ===== */
+
+    reviewForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("reviewerName").value.trim();
+
+        const text =
+            document.getElementById("reviewText").value.trim();
+
+        const selectedRating =
+            document.querySelector(
+                'input[name="rating"]:checked'
+            );
+
+
+        if (!name) {
+
+            alert("দয়া করে আপনার নাম লিখুন।");
+
+            return;
+        }
+
+
+        if (!selectedRating) {
+
+            alert("দয়া করে একটি স্টার রেটিং দিন ⭐");
+
+            return;
+        }
+
+
+        if (!text) {
+
+            alert("দয়া করে আপনার মতামত লিখুন।");
+
+            return;
+        }
+
+
+        const rating =
+            Number(selectedRating.value);
+
+
+        const today =
+            new Date().toLocaleDateString(
+                "bn-BD",
+                {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            );
+
+
+        const newReview = {
+
+            name: name,
+
+            rating: rating,
+
+            text: text,
+
+            date: today
+
+        };
+
+
+        reviews.unshift(newReview);
+
+
+        localStorage.setItem(
+            "mbhPakhirNirReviews",
+            JSON.stringify(reviews)
+        );
+
+
+        /* Reset Form */
+
+        reviewForm.reset();
+
+
+        /* Update */
+
+        displayReviews();
+
+
+        alert(
+            "❤️ আপনার রিভিউ সফলভাবে প্রকাশ হয়েছে।"
+        );
+
+    });
+
+
+    /* Initial Load */
+
+    displayReviews();
+
+});
