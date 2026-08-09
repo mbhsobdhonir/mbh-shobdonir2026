@@ -1395,3 +1395,160 @@ bottom:18px;
     }
 
 }
+/* =====================================
+   19 DAYS SONGSAR — PREMIUM POEM STYLE
+===================================== */
+
+.chapter{
+    background:#f5f1e8;
+    padding:55px 15px;
+}
+
+/* Reading Paper */
+
+.chapter .container{
+    max-width:850px;
+    background:#fffdf8;
+    padding:55px 70px;
+    border-radius:16px;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+    border:1px solid #eee6d5;
+}
+
+/* Poem Header */
+
+.chapter-header{
+    text-align:center;
+    padding-bottom:30px;
+    margin-bottom:35px;
+    border-bottom:1px solid #e6dfd2;
+}
+
+.chapter-part{
+    display:inline-block;
+    color:#0f766e;
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.chapter-header h1{
+    color:#0f766e;
+    font-size:42px;
+    margin:8px 0 15px;
+    line-height:1.4;
+}
+
+.chapter-header h3{
+    color:#555;
+    font-size:18px;
+    font-weight:500;
+}
+
+/* Poem Text */
+
+.story-content p{
+    font-size:20px !important;
+    line-height:2.15 !important;
+    color:#333;
+    margin-bottom:32px !important;
+}
+
+/* Intro */
+
+.story-content p:first-child{
+    background:#f8f5ed;
+    padding:25px 20px !important;
+    border-radius:12px;
+    color:#555;
+}
+
+/* Main Title */
+
+.story-content h2{
+    color:#0f766e;
+    font-size:30px;
+    margin:40px auto 35px;
+}
+
+/* Important Quote */
+
+.story-content blockquote{
+    position:relative;
+    background:#f4f8f7;
+    border-left:5px solid #0f766e;
+    border-radius:10px;
+    color:#444;
+    font-size:20px;
+    padding:25px 30px;
+    margin:40px auto !important;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+/* Author */
+
+.story-content > div:last-child{
+    margin-top:45px;
+    padding:30px 10px;
+    border-top:1px solid #e5e0d7;
+}
+
+.story-content > div:last-child p{
+    margin-bottom:10px !important;
+    font-size:17px !important;
+}
+
+/* Buttons */
+
+.chapter-navigation{
+    text-align:center;
+    margin-top:40px;
+}
+
+.chapter-navigation .btn{
+    margin:5px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .chapter{
+        padding:25px 10px;
+    }
+
+    .chapter .container{
+        width:100%;
+        padding:30px 20px;
+        border-radius:12px;
+    }
+
+    .chapter-header h1{
+        font-size:31px;
+    }
+
+    .chapter-part{
+        font-size:15px;
+    }
+
+    .chapter-header h3{
+        font-size:16px;
+    }
+
+    .story-content p{
+        font-size:18px !important;
+        line-height:2.05 !important;
+        margin-bottom:27px !important;
+    }
+
+    .story-content h2{
+        font-size:25px;
+    }
+
+    .story-content blockquote{
+        font-size:18px;
+        line-height:2;
+        padding:20px 16px;
+    }
+
+}
