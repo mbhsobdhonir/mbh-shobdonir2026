@@ -122,7 +122,153 @@
 </p>
 
 </div>
+<!-- =====================================
+     📚 পাঠকের রিভিউ সেকশন
+===================================== -->
 
+<section class="book-reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="review-heading">
+            <span>💬</span>
+            <h2>পাঠকের মতামত</h2>
+            <p>
+                আপনি যদি <strong>“পাখির নীড়”</strong> পড়ে থাকেন,
+                আপনার অনুভূতিটা আমাদের সঙ্গে শেয়ার করুন।
+            </p>
+        </div>
+
+
+        <!-- ===== Review Form ===== -->
+
+        <div class="review-form-card">
+
+            <h3>✍️ আপনার রিভিউ লিখুন</h3>
+
+            <form id="reviewForm">
+
+                <div class="form-group">
+
+                    <label for="reviewerName">
+                        👤 আপনার নাম
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reviewerName"
+                        placeholder="আপনার নাম লিখুন"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Rating -->
+
+                <div class="form-group">
+
+                    <label>
+                        ⭐ বইটিকে কত স্টার দেবেন?
+                    </label>
+
+                    <div class="star-rating">
+
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Review -->
+
+                <div class="form-group">
+
+                    <label for="reviewText">
+                        📝 আপনার মতামত
+                    </label>
+
+                    <textarea
+                        id="reviewText"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="“পাখির নীড়” পড়ে আপনার কেমন লেগেছে?"
+                        required
+                    ></textarea>
+
+                    <small>
+                        সর্বোচ্চ ৫০০ অক্ষর
+                    </small>
+
+                </div>
+
+
+                <button type="submit" class="review-submit-btn">
+                    📤 রিভিউ প্রকাশ করুন
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ===== Review List ===== -->
+
+        <div class="review-list-section">
+
+            <div class="review-list-header">
+
+                <h3>📖 পাঠকদের রিভিউ</h3>
+
+                <span id="reviewCount">
+                    0টি রিভিউ
+                </span>
+
+            </div>
+
+
+            <div id="reviewList">
+
+                <!-- এখানে রিভিউগুলো JavaScript দিয়ে আসবে -->
+
+            </div>
+
+
+            <!-- No Review -->
+
+            <div id="noReviewMessage" class="no-review">
+
+                <div class="no-review-icon">
+                    💭
+                </div>
+
+                <h4>এখনও কোনো রিভিউ নেই</h4>
+
+                <p>
+                    “পাখির নীড়” পড়ে প্রথম রিভিউটি আপনিই লিখুন।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
 </footer>
 
 <script src="script.js"></script>
